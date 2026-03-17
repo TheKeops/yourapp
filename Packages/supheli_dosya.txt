@@ -1,1 +1,0 @@
-bu dosya test amaçlıdır. Uygulamanın bilinmeyen dosya uyarısını tetiklemek için.
