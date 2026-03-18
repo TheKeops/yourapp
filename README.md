@@ -44,4 +44,6 @@ YourApp uygulaması, uygulama oluşturma kısmından seçenekleri işaretleyerek
 ### ❗ Hata Kodları
 - Repository Not Found : Bu hata uygulamanın açık kaynak kodunun barındığı deponun bulunamadığını gösterir. Deponun olmaması uygulamaya ait verileri indirmede sorunların çıkacağını bildirir.
 
-2026 Keops Studios | YourApp
+<br>
+
+_2026 Keops Studios | YourApp_
