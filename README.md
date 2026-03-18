@@ -32,17 +32,34 @@ graph TD
     E -->|PyInstaller/Compiler| F[Çalıştırılabilir Dosya .exe]
     F --> G[Kullanıcıya Teslim]
 ```
+
+<br>
+
 ### 📄 Uygulama Hakkkında
 YourApp uygulaması, uygulama oluşturma kısmından seçenekleri işaretleyerek ve istediğiniz uygulamayı biraz açıklayarak yapay zekaya gönderin ve kendi uygulamanızı oluşturun. Tabi ki oluşturulan ürünü %100 doğru ve hatasız değildir. Uygulama MIT lisansı vardır.
 
 >[!IMPORTANT]
 > Yapay zeka aracının API anahtarı size ait olması gerekir.
 
+<br>
+
 ### ❓ Nasıl Kullanılır?
 Öncelikle, ayarlardan api anahtarı kısmına kendi api anahtarınızı girin ve altındaki yapay zeka modelinide giriniz. Konsol Açık kısmında ise eğer açık ise uygulamanın yapılış ve derleniş sırasındaki debug komutlarını görebilirsiniz. Uygulama oluştur kısmında ise kendi kişisel zevkinize veya ihtiyacınıza göre seçenekleri işaretleyip kısaca uygulamayı yazıp gönderin. Uygulama en iyi promptu seçerek sizin seçeneklerinizi yapay zekaya gönderir ve yapay zekada bu uygulamayı yapar.
 
+<br>
+
 ### ❗ Hata Kodları
 - Repository Not Found : Bu hata uygulamanın açık kaynak kodunun barındığı deponun bulunamadığını gösterir. Deponun olmaması uygulamaya ait verileri indirmede sorunların çıkacağını bildirir.
+
+<br>
+
+## İletişime Geç!
+Bir problem mi var? Aşağıdaki bağlantılardan bizimle iletişime geçin.
+- <a href="https://linktr.ee/thekeops">Tüm Linkler</a>
+- <a href="https://github.com/thekeops">Github</a>
+- <a href="https://instagram.com/keopsstudios">Instagram</a>
+- <a href="https://youtube.com/@keopsstudios">YouTube</a>
+- <a href="https://x.com/keopsstudios">X (Twitter)</a>
 
 <br>
 
