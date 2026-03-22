@@ -1,3 +1,41 @@
 {
-  "test":"TEST"
+    "MainPage": {
+        "window_title": "Create your own apps.",
+        "title":"YourApp",
+        "subtitle": "Create your own app.",
+        "create_button": "Create App",
+        "settings_button": "Settings",
+        "about_button": "About",
+        "launch_app_button": "Launch App"
+    },
+    "SettingsPage": {
+        "window_title": "Settings",
+        "title": "Settings",
+        "theme_label": "Theme",
+        "color_theme_label": "Color Theme",
+        "language_label": "Language",
+        "coding_lang_label": "Coding Lang",
+        "api_key_label": "Api Key",
+        "ai_model_label": "AI Model",
+        "submit_button": "Submit Settings",
+        "open_console_switch": "Open Console",
+        "placeholder_api": "Enter your API key.",
+        "placeholder_aimodel": "Enter the AI model."
+    },
+    "AboutPage": {
+        "window_title": "About",
+        "title": "About",
+        "about_text": "What is YourApp? \nYourApp allows you to create your own applications using artificial intelligence tools. You can select any model from Google Gemini AI and use that model to create simple applications. You must enter the model's API key yourself, and it must belong to you.\n\n+ Is the API Key Secure? \nThe API key you enter is encrypted within the application and saved in files.\n\n+ How Do I Use It? \nWhile creating your application, you can run it by selecting options and typing a few words. How does this application work? The application creates a prompt in the background based on the options you enter and sends this information from your API key and model to the artificial intelligence. The artificial intelligence then writes the software, the application receives this code, converts it into an .exe file, and presents this converted file to you.\n\n[!] WARNING :\nThis application is only compatible with API keys like Gemini. It may not be compatible with API keys of other AI systems and may produce erroneous results.\n\n+ Open Source :\nKeops Studios loves open source. This application is completely open source; you can explore its source code anytime. However, the code might be poorly done, sorry about that :)\n\n+ Contact Us:\nYou can contact us through these links!\n"
+    },
+    "ErrMessages": {
+        "RepoNotFound": "[!] Repo Not Found!",
+        "ExitMessage": "Are you sure you want to leave?",
+        "ApiNotFound": "First, you need to enter an API key and select ai model. You can enter it in the settings.",
+        "SettingsSaved": "Your settings have been saved.",
+        "RepoNotFoundMSG": "Warning! Problems may occur because the application's source repository could not be found.",
+        "NotInternet": "No internet connection!"
+    },
+    "GlobalText": {
+        "loading": "LOADING"
+    }
 }
