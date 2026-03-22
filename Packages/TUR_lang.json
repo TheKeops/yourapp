@@ -2,11 +2,11 @@
     "MainPage": {
         "window_title": "Kendi uygulamanı yap.",
         "title":"YourApp",
-        "subtitle": "Kendi uygulamanı oluştur.",
-        "create_button": "Uygulama Oluştur",
+        "subtitle": "Kendi uygulamanı yap.",
+        "create_button": "Uygulama Yap",
         "settings_button": "Ayarlar",
         "about_button": "Hakkında",
-        "launch_app_button": "Uygulamayı Başlat"
+        "launch_app_button": "Uygulama Başlat"
     },
     "SettingsPage": {
         "window_title": "Ayarlar",
