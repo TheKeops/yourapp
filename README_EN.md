@@ -14,6 +14,12 @@
 >[!WARNING]
 >The application is in its early stages. Various features may be limited or missing; updates are released based on the support and demand for the application. As we are developing our own experiences and experiments, you may encounter errors or nonsensical code structures.
 
+>[!CAUTION]
+> The AI ​​model must be Gemini AI; otherwise, it will be disabled. API addresses of other AIs will not be accepted and will result in an error.
+
+>[!NOTE]
+> Python 3.11 must be installed on your computer when downloading the application. Setting this method both prevents errors and facilitates the download, allowing the application to be converted to .exe format.
+
 ### ⚡ Key Features :
 - ✅ Run the application in .exe format.
 
@@ -37,9 +43,6 @@ graph TD
 
 ### 📄 About the Application
 With the YourApp application, create your own software by selecting options from the application creation section and briefly describing the application you want to send to the AI. Of course, the generated product is not 100% accurate and bug-free. The application is under the MIT license.
-
->[!IMPORTANT]
->You must have your own API key for the AI tool.
 
 <br>
 
