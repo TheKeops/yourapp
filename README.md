@@ -17,6 +17,12 @@
 >[!WARNING]
 > Uygulama ilk sürümlerindedir. Çeşitli özellikler sınırlandırılmış veya olmayabilir, uygulamaya gelen destek ve talebe göre güncelleme atılmaktadır. Uygulama kendi deneyimlerimiz ve deneyimlerimizi geliştirmekte olduğumuz için hatalar veya anlamsız kodlar yapılar ile karşılaşabilirsiniz.
 
+>[!CAUTION]
+> Yapay zeka modeli Gemini AI olması şarttır aksi taktirde diğer yapay zekaların api adresleri kabul edilmez ve hata verir.
+
+>[!NOTE]
+> Uygulama indirirken bilgisayarınaz python 3.11 kurulur. Bunun amacı yaptığınız uygulamaların hem hata ve kütüphane indirmesini kolaylaştırmak hem de kolayca .exe formatına getirilebilmesini sağlamak.
+
 ### ⚡ Temel Özellikler
 - ✅ .exe formatında uygulamayı çalıştır.
 - ✅ Açık kaynak proje ile kodları okuyabilirsiniz.
@@ -36,10 +42,7 @@ graph TD
 <br>
 
 ### 📄 Uygulama Hakkkında
-YourApp uygulaması, uygulama oluşturma kısmından seçenekleri işaretleyerek ve istediğiniz uygulamayı biraz açıklayarak yapay zekaya gönderin ve kendi uygulamanızı oluşturun. Tabi ki oluşturulan ürünü %100 doğru ve hatasız değildir. Uygulama MIT lisansı vardır.
-
->[!IMPORTANT]
-> Yapay zeka aracının API anahtarı size ait olması gerekir.
+YourApp uygulaması, uygulama oluşturma kısmından seçenekleri işaretleyerek ve istediğiniz uygulamayı biraz açıklayarak yapay zekaya gönderin ve kendi uygulamanızı oluşturun. Tabi ki oluşturulan ürünü %100 doğru ve hatasız değildir.
 
 <br>
 
