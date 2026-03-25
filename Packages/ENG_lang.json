@@ -34,7 +34,7 @@
         "app_title_label": "App Title",
         "platform_label": "Platform",
         "ui_library_label": "UI Lib.",
-        "langauge_label": "Language",
+        "language_label": "Language",
         "gui_switch": "GUI",
         "user_input_label": "User Input",
         "create_app_button": "Create App"
