@@ -38,7 +38,7 @@
         "gui_switch": "GUI",
         "user_input_label": "User Input",
         "create_app_button": "Create App",
-        "informatin_text":"* Every application uses your API address. \n* You are responsible for the AI-powered application you create. \n* Your application may contain errors."
+        "informatin_text":"* Every application uses your API address. \n\n* You are responsible for the AI-powered application you create. \n\n* Your application may contain errors."
     },
     "ErrMessages": {
         "RepoNotFound": "[!] Repo Not Found!",
