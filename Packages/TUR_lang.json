@@ -29,7 +29,7 @@
         "app_title_label": "Uygulama Adı",
         "platform_label": "Platform",
         "ui_library_label": "UI Küt.",
-        "langauge_label": "Dil",
+        "language_label": "Dil",
         "gui_switch": "GUI",
         "user_input_label": "Kullanıcı Girişi",
         "create_app_button": "Uygulama Oluştur"
