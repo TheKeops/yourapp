@@ -38,7 +38,7 @@
         "gui_switch": "GUI",
         "user_input_label": "User Input",
         "create_app_button": "Create App",
-        "informatin_text":"* Every application uses your API address. \n\n* You are responsible for the AI-powered application you create. \n\n* Your application may contain errors."
+        "informatin_text":"* Every application uses your API address. \n\n* You are responsible for the AI-powered application you create. \n\n* Your application may contain errors. \n\n[!] If the application appears unresponsive, do not close it. This error occurs because a process is running in the background."
     },
     "ErrMessages": {
         "RepoNotFound": "[!] Repo Not Found!",

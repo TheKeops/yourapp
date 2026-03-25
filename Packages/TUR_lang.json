@@ -33,7 +33,7 @@
         "gui_switch": "GUI",
         "user_input_label": "Kullanıcı Girişi",
         "create_app_button": "Uygulama Oluştur",
-        "information_text": "* Her uygulama API adresinizi kullanır. \n\n* Oluşturduğunuz yapay zeka destekli uygulamadan siz sorumlusunuz. \n\n* Uygulamanız hatalar içerebilir."
+        "information_text": "* Her uygulama API adresinizi kullanır. \n\n* Oluşturduğunuz yapay zeka destekli uygulamadan siz sorumlusunuz. \n\n* Uygulamanız hatalar içerebilir. \n\n[!] Uygulama yanıt vermiyor gibi durumlarda uygulamayı kapatmayın arkaplanda işlem sürdüğünden dolayı bu hata verilmektedir."
     },
     "AboutPage": {
         "window_title": "Hakkında",
