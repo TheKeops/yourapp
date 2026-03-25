@@ -27,6 +27,18 @@
         "title": "About",
         "about_text": "What is YourApp? \nYourApp allows you to create your own applications using artificial intelligence tools. You can select any model from Google Gemini AI and use that model to create simple applications. You must enter the model's API key yourself, and it must belong to you.\n\n+ Is the API Key Secure? \nThe API key you enter is encrypted within the application and saved in files.\n\n+ How Do I Use It? \nWhile creating your application, you can run it by selecting options and typing a few words. How does this application work? The application creates a prompt in the background based on the options you enter and sends this information from your API key and model to the artificial intelligence. The artificial intelligence then writes the software, the application receives this code, converts it into an .exe file, and presents this converted file to you.\n\n[!] WARNING :\nThis application is only compatible with API keys like Gemini. It may not be compatible with API keys of other AI systems and may produce erroneous results.\n\n+ Open Source :\nKeops Studios loves open source. This application is completely open source; you can explore its source code anytime. However, the code might be poorly done, sorry about that :)\n\n+ Contact Us:\nYou can contact us through these links!\n"
     },
+    "CreateAppPage": {
+        "window_title": "Create App",
+        "title": "Create New App",
+        "app_type_label": "App Type",
+        "app_title_label": "App Title",
+        "platform_label": "Platform",
+        "ui_library_label": "UI Lib.",
+        "langauge_label": "Language",
+        "gui_switch": "GUI",
+        "user_input_label": "User Input",
+        "create_app_button": "Create App"
+    },
     "ErrMessages": {
         "RepoNotFound": "[!] Repo Not Found!",
         "ExitMessage": "Are you sure you want to leave?",

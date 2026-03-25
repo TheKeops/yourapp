@@ -22,10 +22,22 @@
         "placeholder_api": "API anahtarı giriniz.",
         "placeholder_aimodel": "YZ modeli giriniz."
     },
+    "CreateAppPage": {
+        "window_title": "Uygulama Oluştur",
+        "title": "Yeni Uygulama Oluştur",
+        "app_type_label": "Uygulama Türü",
+        "app_title_label": "Uygulama Adı",
+        "platform_label": "Platform",
+        "ui_library_label": "UI Küt.",
+        "langauge_label": "Dil",
+        "gui_switch": "GUI",
+        "user_input_label": "Kullanıcı Girişi",
+        "create_app_button": "Uygulama Oluştur"
+    },
     "AboutPage": {
         "window_title": "Hakkında",
         "title": "Hakkında",
-        "about_text": "YourApp nedir?\n\nYourApp, yapay zeka araçlarını kullanarak kendi uygulamalarınızı oluşturmanıza olanak tanır. Google Gemini AI'dan herhangi bir modeli seçebilir ve bu modeli kullanarak basit uygulamalar oluşturabilirsiniz. Modelin API anahtarını kendiniz girmeniz gerekir ve bu anahtar size ait olmalıdır.\n\n+ API Anahtarı Güvenli mi?\nGirdiğiniz API anahtarı uygulama içinde şifrelenir ve dosyalara kaydedilir.\n\n+ Nasıl Kullanılır?\nUygulamanızı oluştururken, seçenekleri belirleyip birkaç kelime yazarak çalıştırabilirsiniz. Bu uygulama nasıl çalışır? Uygulama, girdiğiniz seçeneklere göre arka planda bir komut istemi oluşturur ve bu bilgileri API anahtarınızdan ve modelinizden yapay zekaya gönderir. Yapay zeka daha sonra yazılımı yazar, uygulama bu kodu alır, bir .exe dosyasına dönüştürür ve bu dönüştürülmüş dosyayı size sunar.\n\n[!] UYARI:\nBu uygulama yalnızca Gemini gibi API anahtarlarıyla uyumludur. Diğer yapay zeka sistemlerinin API anahtarlarıyla uyumlu olmayabilir ve hatalı sonuçlar üretebilir.\n\n+ Açık Kaynak:\nKeops Studios açık kaynak yazılımları sever. Bu uygulama tamamen açık kaynaklıdır; kaynak kodunu istediğiniz zaman inceleyebilirsiniz. Ancak, kodun kalitesi düşük olabilir, bunun için özür dileriz :)\n\n+ Bize Ulaşın:\nBu bağlantılar aracılığıyla bizimle iletişime geçebilirsiniz!"
+        "about_text": "YourApp nedir?\n\nYourApp, yapay zeka araçlarını kullanarak kendi uygulamalarınızı oluşturmanıza olanak tanır. Google Gemini AI'dan herhangi bir modeli seçebilir ve bu modeli kullanarak basit uygulamalar oluşturabilirsiniz. Modelin API anahtarını kendiniz girmeniz gerekir ve bu anahtar size ait olmalıdır.\n\n+ API Anahtarı Güvenli mi?\nGirdiğiniz API anahtarı uygulama içinde şifrelenir ve dosyalara kaydedilir.\n\n+ Nasıl Kullanılır?\nUygulamanızı oluştururken, seçenekleri belirleyip birkaç kelime yazarak çalıştırabilirsiniz. Bu uygulama nasıl çalışır? Uygulama, girdiğiniz seçeneklere göre arka planda bir komut istemi oluşturur ve bu bilgileri API anahtarınızdan ve modelinizden yapay zekaya gönderir. Yapay zeka daha sonra yazılımı yazar, uygulama bu kodu alır, bir .exe dosyasına dönüştürür ve bu dönüştürülmüş dosyayı size sunar.\n\n[!] UYARI:\nBu uygulama yalnızca Gemini gibi API anahtarlarıyla uyumludur. Diğer yapay zeka sistemlerinin API anahtarlarıyla uyumlu olmayabilir ve hatalı sonuçlar üretebilir.\n\n+ Açık Kaynak:\nKeops Studios açık kaynak yazılımları sever. Bu uygulama tamamen açık kaynaklıdır; kaynak kodunu istediğiniz zaman inceleyebilirsiniz. Ancak, kodun kalitesi düşük olabilir, bunun için özür dileriz :)\n\n+ Bize Ulaşın:\nBu bağlantılar aracılığıyla bizimle iletişime geçebilirsiniz!\n"
     },
     "ErrMessages": {
         "RepoNotFound": "[!] Depo Bulunamadı!",
