@@ -6,6 +6,7 @@
         "create_button": "Uygulama Yap",
         "settings_button": "Ayarlar",
         "about_button": "Hakkında",
+        "delete_app_button":"Sil",
         "launch_app_button": "Uygulama Başlat"
     },
     "SettingsPage": {

@@ -6,6 +6,7 @@
         "create_button": "Create App",
         "settings_button": "Settings",
         "about_button": "About",
+        "delete_app_button":"Delete App",
         "launch_app_button": "Launch App"
     },
     "SettingsPage": {
