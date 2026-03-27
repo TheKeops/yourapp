@@ -4,6 +4,7 @@ import modules.file_manager as manager
 import shutil
 import pip
 from colorama import Fore, init
+import sys
 
 init(autoreset=True)
 
@@ -23,19 +24,21 @@ def build_exe(main_file, app_name, gui: bool):
         print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Packaging begins: {ana_dosya}")
 
         if gui == True:
-            command_gui = [
-                "pyinstaller",
+            command_gui = [sys.executable,
+                "-m",
+                "PyInstaller",
                 "--onefile",
                 "--clean",
                 "--distpath", hedef_klasor,
                 f"{app_name}.py"
             ]
             os.chdir(kaynak_klasoru)
-            subprocess.run(command_gui, check=True)
+            subprocess.run(command_gui, check=True, shell=True)
 
         else:
-            command_console = [
-                "pyinstaller",
+            command_console = [sys.executable,
+                "-m",
+                "PyInstaller",
                 "--onefile",
                 "--clean",
                 "--noconsole",
@@ -43,7 +46,7 @@ def build_exe(main_file, app_name, gui: bool):
                 f"{app_name}.py"
             ]
             os.chdir(kaynak_klasoru)
-            subprocess.run(command_console, check=True)
+            exe = subprocess.run(command_console, check=True, shell=True)
 
         if os.path.exists("build"):
             shutil.rmtree("build")
