@@ -21,7 +21,8 @@
         "submit_button": "Ayarları Kaydet",
         "open_console_switch": "Konsol Aç",
         "placeholder_api": "API anahtarı giriniz.",
-        "placeholder_aimodel": "YZ modeli giriniz."
+        "placeholder_aimodel": "YZ modeli giriniz.",
+        "GetApiKey": "Api anahtarı al."
     },
     "CreateAppPage": {
         "window_title": "Uygulama Oluştur",

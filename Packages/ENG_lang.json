@@ -21,7 +21,8 @@
         "submit_button": "Submit Settings",
         "open_console_switch": "Open Console",
         "placeholder_api": "Enter your API key.",
-        "placeholder_aimodel": "Enter the AI model."
+        "placeholder_aimodel": "Enter the AI model.",
+        "GetApiKey": "Get api key"
     },
     "AboutPage": {
         "window_title": "About",
