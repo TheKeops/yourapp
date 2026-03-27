@@ -44,12 +44,25 @@
     "ErrMessages": {
         "RepoNotFound": "[!] Depo Bulunamadı!",
         "ExitMessage": "Çıkmak istediğinizden emin misiniz?",
-        "ApiNotFound": "Öncelikle, bir api anahtarına ihtiyacın var ve bir yapay zeka modeli gir. Ayarlar sekmesinden yazabilirsin.",
-        "SettingsSaved": "Ayarların kaydedildi.",
-        "RepoNotFoundMSG": "Uyarı! Uygulamaya ait kaynak deposu bulunamadı! Çeşitli problemler ile karşılaşabilirsiniz.",
-        "NotInternet": "İnternet bağlantısı yok."
+        "NotInternet": "İnternet bağlantısı yok.",
+        "ChooseApp":"Lütfen bir uygulama seç!",
+        "CreationFailed": "Uygulama üretimi başarısız."
+    },
+    "InfoMessages":{
+        "RestartApp":"Lütfen uygulamayı yeniden başlatın.",
+        "SettingsSaved": "Ayarların kaydedildi."
+    },
+    "WarningMessages": {
+        "ApiNotFound": "Öncelikle, ayarlardan bir api anahtarı ve bir yapay zeka modeli girmeniz gerekmektedir.",
+        "RepoNotFoundMSG": "Uyarı! Uygulamaya ait kaynak deposu bulunamadı! Çeşitli problemler ile karşılaşabilirsiniz."
+    },
+    "AskMessages": {
+        "ExitMessage": "Çıkmak istediğinizden emin misiniz?",
+        "DeleteMessage": "Uygulamayı silmek istediğinizden emin misiniz? Kaynak kodu ile .exe dosyası silinecektir."
     },
     "GlobalText": {
-        "loading": "YÜKLENİYOR"
+        "loading": "YÜKLENİYOR",
+        "loading_screen":"LÜTFEN BEKLEYİN",
+        "loading_screen_subtitle":"Lütfen bekleyin, uygulamanız yapılıyor..."
     }
 }

@@ -43,13 +43,26 @@
     },
     "ErrMessages": {
         "RepoNotFound": "[!] Repo Not Found!",
-        "ExitMessage": "Are you sure you want to leave?",
+        "NotInternet": "No internet connection!",
+        "BlankError":"Do not leave it blank.",
+        "ChooseApp":"Please choose an app!",
+        "CreationFailed": "Application creation failed."
+    },
+    "InfoMessages":{
+        "RestartApp":"Please restart the application.",
+        "SettingsSaved": "Your settings have been saved."
+    },
+    "WarningMessages": {
         "ApiNotFound": "First, you need to enter an API key and select ai model. You can enter it in the settings.",
-        "SettingsSaved": "Your settings have been saved.",
-        "RepoNotFoundMSG": "Warning! Problems may occur because the application's source repository could not be found.",
-        "NotInternet": "No internet connection!"
+        "RepoNotFoundMSG": "Warning! Problems may occur because the application's source repository could not be found."
+    },
+    "AskMessages": {
+        "ExitMessage": "Are you sure you want to leave?",
+        "DeleteMessage": "Are you sure you want to delete this application? The application's Python code will also be deleted."
     },
     "GlobalText": {
-        "loading": "LOADING"
+        "loading": "LOADING",
+        "loading_screen":"PLEASE WAIT",
+        "loading_screen_subtitle":"Please wait, Your application is being made..."
     }
 }
