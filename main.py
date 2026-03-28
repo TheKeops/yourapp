@@ -381,9 +381,10 @@ def main():
             for i in root.winfo_children():
                 i.destroy()
             
+            root.update()
             root.title(f"YourApp | {lang_text['MainPage']['window_title']}")
 
-            sidemenu_canvas = ctk.CTkFrame(root, width=260, height=750, fg_color="#333333", corner_radius=0)
+            sidemenu_canvas = ctk.CTkFrame(root, width=int(260), height=int(750), fg_color="#333333", corner_radius=0)
             sidemenu_canvas.pack(side="left", fill="y")
             sidemenu_canvas.pack_propagate(False)
 
@@ -434,6 +435,7 @@ def main():
                 about_button.configure(bg_color="#E0E0E0")
                 settings_button.configure(bg_color="#E0E0E0")
                 start_my_app_button.configure(bg_color="#E0E0E0")
+                delete_app_button.configure(bg_color="#E0E0E0")
                 message.configure(bg_color="#E0E0E0", text_color="#FF9F29")
             else:
                 pass
@@ -444,7 +446,7 @@ def main():
                 title = app_title.get().strip()
                 os = platform.get().strip()
                 ui = ui_library.get().strip()
-                lang = langauge.get().strip()
+                lang = language.get().strip()
                 user_input = user_input_text.get("1.0", tk.END)
                 gui = 0
 
@@ -459,14 +461,25 @@ def main():
                 else:
                     try:
                         loading_screen()
-                        ai.prompt(app_type=type, app_title_param=title, gui_param=gui, user_input=user_input, platform=os, ui_library=ui, language=lang)
-                        root.update()
-                        ai.create_app()
-                        messagebox.showinfo("YourApp", f"{lang_text['InfoMessages']['RestartApp']}")
-                        root.destroy()
+                        try:
+                            root.update()
+                            ai.prompt(app_type=type, app_title_param=title, gui_param=gui, 
+                                    user_input=user_input, platform=os, ui_library=ui, language=lang)
+                            root.update()
+                            ai.create_app()
+                            root.update()
+                            main_page()
+                            root.update()
+                        except Exception as inner_e:
+                            print(f"{Fore.RED}[ERROR - AI_PROCESS] {inner_e}")
+                            root.update()
+                            main_page()
+                            root.update()
+
                     except Exception as e:
                         print(f"{Fore.RED}[ERROR - {get_module_name()}] {e}")
                         messagebox.showerror("YourApp", f"{e}")
+                        main_page()
 
             if settings["api-key-insert"] == False or settings["ai-model"] == None:
                 messagebox.showwarning("YourApp", f"{lang_text['WarningMessages']['ApiNotFound']}")
@@ -507,8 +520,8 @@ def main():
                 ui_library = ctk.CTkComboBox(root, width=200, values=["Tkinter", "Customtkinter"], font=ctk.CTkFont(size=22))
                 ui_library.place(x=50, y=440)
 
-                langauge_label = ctk.CTkLabel(root, text=f"{lang_text['CreateAppPage']['language_label']}", font=ctk.CTkFont(size=22))
-                langauge_label.place(x=450,y=100,)
+                language_label = ctk.CTkLabel(root, text=f"{lang_text['CreateAppPage']['language_label']}", font=ctk.CTkFont(size=22))
+                language_label.place(x=450,y=100,)
 
                 values = []
 
@@ -517,8 +530,9 @@ def main():
                     lang_file = file_first.split("_")[0]
                     values.append(lang_file)
 
-                langauge = ctk.CTkComboBox(root, width=200, values=values ,font=ctk.CTkFont(size=22))
-                langauge.place(x=400,y=140)
+                language = ctk.CTkComboBox(root, width=200, values=values ,font=ctk.CTkFont(size=22))
+                language.place(x=400,y=140)
+                language.set(settings["language"])
 
                 gui_switch = ctk.CTkSwitch(root, text=f"{lang_text['CreateAppPage']['gui_switch']}", font=ctk.CTkFont(size=24, weight="bold"), variable=ctk.BooleanVar(value=0))
                 gui_switch.place(x=450, y=200)
