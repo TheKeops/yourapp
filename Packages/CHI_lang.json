@@ -1,0 +1,69 @@
+{
+    "MainPage": {
+        "window_title": "制作你自己的应用。",
+        "title": "YourApp",
+        "subtitle": "制作你自己的应用。",
+        "create_button": "制作应用",
+        "settings_button": "设置",
+        "about_button": "关于",
+        "delete_app_button": "删除",
+        "launch_app_button": "启动应用"
+    },
+    "SettingsPage": {
+        "window_title": "设置",
+        "title": "设置",
+        "theme_label": "主题",
+        "color_theme_label": "颜色主题",
+        "language_label": "语言",
+        "coding_lang_label": "编程语言",
+        "api_key_label": "API 密钥",
+        "ai_model_label": "人工智能模型",
+        "submit_button": "保存设置",
+        "open_console_switch": "打开控制台",
+        "placeholder_api": "请输入 API 密钥。",
+        "placeholder_aimodel": "请输入人工智能模型。",
+        "GetApiKey": "获取 API 密钥。"
+    },
+    "CreateAppPage": {
+        "window_title": "创建应用",
+        "title": "创建新应用",
+        "app_type_label": "应用类型",
+        "app_title_label": "应用名称",
+        "platform_label": "平台",
+        "ui_library_label": "UI 库",
+        "language_label": "语言",
+        "gui_switch": "图形界面 (GUI)",
+        "user_input_label": "用户输入",
+        "create_app_button": "创建应用",
+        "information_text": "* 每个应用都使用您的 API 地址。\n\n* 您对所创建的人工智能支持的应用负责。\n\n* 您的应用可能包含错误。\n\n[!] 如果应用看起来没有响应，请不要关闭它，因为后台正在处理中。"
+    },
+    "AboutPage": {
+        "window_title": "关于",
+        "title": "关于",
+        "about_text": "什么是 YourApp？\n\nYourApp 允许您利用人工智能工具创建自己的应用程序。您可以从 Google Gemini AI 中选择任何模型，并使用该模型创建简单的应用程序。您需要自行输入属于您的 API 密钥。\n\n+ API 密钥安全吗？\n您输入的 API 密钥将在应用程序内加密并保存到文件中。\n\n+ 如何使用？\n在创建应用时，通过确定选项并输入几个词即可运行。这个应用是如何工作的？应用会根据您选择的选项在后台生成提示词，并将这些信息通过您的 API 密钥发送给人工智能。人工智能随后编写软件，应用获取该代码，将其转换为 .exe 文件并提供给您。\n\n[!] 警告：\n本应用仅与 Gemini 等 API 密钥兼容。可能不兼容其他人工智能系统的 API 密钥，并可能产生错误结果。\n\n+ 开源：\nKeops Studios 热爱开源软件。本应用完全开源；您可以随时查看源代码。但是，代码质量可能较低，敬请见谅 :)\n\n+ 联系我们：\n您可以通过这些链接与我们联系！\n"
+    },
+    "ErrMessages": {
+        "RepoNotFound": "[!] 未找到仓库！",
+        "ExitMessage": "您确定要退出吗？",
+        "NotInternet": "无网络连接。",
+        "ChooseApp": "请选择一个应用！",
+        "CreationFailed": "应用创建失败。"
+    },
+    "InfoMessages": {
+        "RestartApp": "请重新启动应用。",
+        "SettingsSaved": "您的设置已保存。"
+    },
+    "WarningMessages": {
+        "ApiNotFound": "首先，您需要在设置中输入 API 密钥和人工智能模型。",
+        "RepoNotFoundMSG": "警告！未找到应用的源代码仓库！您可能会遇到各种问题。"
+    },
+    "AskMessages": {
+        "ExitMessage": "您确定要退出吗？",
+        "DeleteMessage": "您确定要删除该应用吗？源代码和 .exe 文件将被删除。"
+    },
+    "GlobalText": {
+        "loading": "正在加载",
+        "loading_screen": "请稍候",
+        "loading_screen_subtitle": "请稍候，您的应用正在制作中..."
+    }
+}

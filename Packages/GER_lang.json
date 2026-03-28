@@ -1,0 +1,69 @@
+{
+    "MainPage": {
+        "window_title": "Erstellen Sie Ihre eigene App.",
+        "title": "YourApp",
+        "subtitle": "Erstellen Sie Ihre eigene App.",
+        "create_button": "App Erstellen",
+        "settings_button": "Einstellungen",
+        "about_button": "Über uns",
+        "delete_app_button": "Löschen",
+        "launch_app_button": "App Starten"
+    },
+    "SettingsPage": {
+        "window_title": "Einstellungen",
+        "title": "Einstellungen",
+        "theme_label": "Thema",
+        "color_theme_label": "Farbschema",
+        "language_label": "Sprache",
+        "coding_lang_label": "Programmiersprache",
+        "api_key_label": "API-Schlüssel",
+        "ai_model_label": "KI-Modell",
+        "submit_button": "Einstellungen Speichern",
+        "open_console_switch": "Konsole Öffnen",
+        "placeholder_api": "API-Schlüssel eingeben.",
+        "placeholder_aimodel": "KI-Modell eingeben.",
+        "GetApiKey": "API-Schlüssel anfordern."
+    },
+    "CreateAppPage": {
+        "window_title": "App Erstellen",
+        "title": "Neue App Erstellen",
+        "app_type_label": "App-Typ",
+        "app_title_label": "App-Name",
+        "platform_label": "Plattform",
+        "ui_library_label": "UI-Bibliothek",
+        "language_label": "Sprache",
+        "gui_switch": "Grafische Benutzeroberfläche",
+        "user_input_label": "Benutzereingabe",
+        "create_app_button": "App Erstellen",
+        "information_text": "* Jede App verwendet Ihre API-Adresse. \n\n* Sie sind für die von Ihnen erstellte KI-gestützte App verantwortlich. \n\n* Ihre App kann Fehler enthalten. \n\n[!] Wenn die App nicht reagiert, schließen Sie sie nicht. Dieser Fehler tritt auf, weil der Prozess im Hintergrund weiterläuft."
+    },
+    "AboutPage": {
+        "window_title": "Über uns",
+        "title": "Über uns",
+        "about_text": "Was ist YourApp?\n\nYourApp ermöglicht es Ihnen, Ihre eigenen Anwendungen mithilfe von KI-Tools zu erstellen. Sie können jedes Modell von Google Gemini AI auswählen und damit einfache Anwendungen erstellen. Sie müssen Ihren eigenen API-Schlüssel eingeben.\n\n+ Ist der API-Schlüssel sicher?\nDer eingegebene API-Schlüssel wird innerhalb der Anwendung verschlüsselt und in Dateien gespeichert.\n\n+ Wie wird es verwendet?\nBeim Erstellen Ihrer Anwendung können Sie Optionen festlegen und sie durch Schreiben einiger Wörter ausführen. Wie funktioniert diese Anwendung? Die Anwendung erstellt im Hintergrund einen Prompt basierend auf Ihren gewählten Optionen und sendet diese Informationen über Ihren API-Schlüssel an die KI. Die KI schreibt dann die Software, die Anwendung empfängt diesen Code, konvertiert ihn in eine .exe-Datei und stellt sie Ihnen zur Verfügung.\n\n[!] WARNUNG:\nDiese Anwendung ist nur mit API-Schlüsseln wie Gemini kompatibel. Sie ist möglicherweise nicht mit API-Schlüsseln anderer KI-Systeme kompatibel und kann fehlerhafte Ergebnisse liefern.\n\n+ Open Source:\nKeops Studios liebt Open-Source-Software. Diese Anwendung ist vollständig Open Source; Sie können den Quellcode jederzeit einsehen. Die Codequalität könnte jedoch niedrig sein, wir bitten dies zu entschuldigen :)\n\n+ Kontakt:\nÜber diese Links können Sie uns kontaktieren!\n"
+    },
+    "ErrMessages": {
+        "RepoNotFound": "[!] Repository nicht gefunden!",
+        "ExitMessage": "Sind Sie sicher, dass Sie beenden möchten?",
+        "NotInternet": "Keine Internetverbindung.",
+        "ChooseApp": "Bitte wählen Sie eine App aus!",
+        "CreationFailed": "App-Erstellung fehlgeschlagen."
+    },
+    "InfoMessages": {
+        "RestartApp": "Bitte starten Sie die Anwendung neu.",
+        "SettingsSaved": "Ihre Einstellungen wurden gespeichert."
+    },
+    "WarningMessages": {
+        "ApiNotFound": "Zuerst müssen Sie einen API-Schlüssel und ein KI-Modell in den Einstellungen eingeben.",
+        "RepoNotFoundMSG": "Warnung! Das Quell-Repository für die Anwendung wurde nicht gefunden! Es könnten verschiedene Probleme auftreten."
+    },
+    "AskMessages": {
+        "ExitMessage": "Sind Sie sicher, dass Sie beenden möchten?",
+        "DeleteMessage": "Sind Sie sicher, dass Sie die Anwendung löschen möchten? Der Quellcode und die .exe-Datei werden gelöscht."
+    },
+    "GlobalText": {
+        "loading": "WIRD GELADEN",
+        "loading_screen": "BITTE WARTEN",
+        "loading_screen_subtitle": "Bitte warten, Ihre App wird erstellt..."
+    }
+}

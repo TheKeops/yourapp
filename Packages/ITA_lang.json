@@ -1,0 +1,69 @@
+{
+    "MainPage": {
+        "window_title": "Crea la tua app.",
+        "title": "YourApp",
+        "subtitle": "Crea la tua app.",
+        "create_button": "Crea App",
+        "settings_button": "Impostazioni",
+        "about_button": "Informazioni",
+        "delete_app_button": "Elimina",
+        "launch_app_button": "Avvia App"
+    },
+    "SettingsPage": {
+        "window_title": "Impostazioni",
+        "title": "Impostazioni",
+        "theme_label": "Tema",
+        "color_theme_label": "Tema Colore",
+        "language_label": "Lingua",
+        "coding_lang_label": "Linguaggio di Programmazione",
+        "api_key_label": "Chiave API",
+        "ai_model_label": "Modello IA",
+        "submit_button": "Salva Impostazioni",
+        "open_console_switch": "Apri Console",
+        "placeholder_api": "Inserisci la chiave API.",
+        "placeholder_aimodel": "Inserisci il modello IA.",
+        "GetApiKey": "Ottieni chiave API."
+    },
+    "CreateAppPage": {
+        "window_title": "Crea Applicazione",
+        "title": "Crea Nuova Applicazione",
+        "app_type_label": "Tipo di App",
+        "app_title_label": "Nome App",
+        "platform_label": "Piattaforma",
+        "ui_library_label": "Libreria UI",
+        "language_label": "Lingua",
+        "gui_switch": "GUI",
+        "user_input_label": "Input Utente",
+        "create_app_button": "Crea Applicazione",
+        "information_text": "* Ogni app utilizza il tuo indirizzo API. \n\n* Sei responsabile dell'app basata sull'intelligenza artificiale che crei. \n\n* La tua app potrebbe contenere errori. \n\n[!] Se l'app non risponde, non chiuderla. Questo errore si verifica perché il processo è in esecuzione in background."
+    },
+    "AboutPage": {
+        "window_title": "Informazioni",
+        "title": "Informazioni",
+        "about_text": "Cos'è YourApp?\n\nYourApp ti consente di creare le tue applicazioni utilizzando strumenti di intelligenza artificiale. Puoi scegliere qualsiasi modello da Google Gemini AI e creare semplici applicazioni utilizzandolo. Devi inserire la tua chiave API personale.\n\n+ La chiave API è sicura?\nLa chiave API inserita viene crittografata all'interno dell'applicazione e salvata nei file.\n\n+ Come si usa?\nDurante la creazione dell'applicazione, puoi impostare le opzioni e avviarla scrivendo poche parole. Come funziona questa applicazione? L'applicazione crea un prompt in background in base alle opzioni selezionate e invia queste informazioni all'IA tramite la tua chiave API. L'IA scrive quindi il software, l'applicazione riceve questo codice, lo converte in un file .exe e te lo fornisce.\n\n[!] ATTENZIONE:\nQuesta applicazione è compatibile solo con chiavi API come Gemini. Potrebbe non essere compatibile con le chiavi API di altri sistemi di intelligenza artificiale e produrre risultati errati.\n\n+ Open Source:\nKeops Studios ama il software open source. Questa applicazione è completamente open source; puoi esaminare il codice sorgente in qualsiasi momento. Tuttavia, la qualità del codice potrebbe essere bassa, ci scusiamo per questo :)\n\n+ Contattaci:\nPuoi contattarci tramite questi link!\n"
+    },
+    "ErrMessages": {
+        "RepoNotFound": "[!] Repository non trovato!",
+        "ExitMessage": "Sei sicuro di voler uscire?",
+        "NotInternet": "Nessuna connessione internet.",
+        "ChooseApp": "Per favore, seleziona un'app!",
+        "CreationFailed": "Creazione dell'applicazione fallita."
+    },
+    "InfoMessages": {
+        "RestartApp": "Per favore, riavvia l'applicazione.",
+        "SettingsSaved": "Le tue impostazioni sono state salvate."
+    },
+    "WarningMessages": {
+        "ApiNotFound": "Innanzitutto, devi inserire una chiave API e un modello di intelligenza artificiale nelle impostazioni.",
+        "RepoNotFoundMSG": "Avviso! Repository sorgente dell'app non trovato! Potresti riscontrare vari problemi."
+    },
+    "AskMessages": {
+        "ExitMessage": "Sei sicuro di voler uscire?",
+        "DeleteMessage": "Sei sicuro di voler eliminare l'applicazione? Il codice sorgente e il file .exe verranno eliminati."
+    },
+    "GlobalText": {
+        "loading": "CARICAMENTO",
+        "loading_screen": "ATTENDERE PREGO",
+        "loading_screen_subtitle": "Attendi, la tua app è in fase di creazione..."
+    }
+}

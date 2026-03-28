@@ -1,0 +1,69 @@
+{
+    "MainPage": {
+        "window_title": "Crea tu propia aplicación.",
+        "title": "YourApp",
+        "subtitle": "Crea tu propia aplicación.",
+        "create_button": "Crear Aplicación",
+        "settings_button": "Ajustes",
+        "about_button": "Acerca de",
+        "delete_app_button": "Eliminar",
+        "launch_app_button": "Iniciar Aplicación"
+    },
+    "SettingsPage": {
+        "window_title": "Ajustes",
+        "title": "Ajustes",
+        "theme_label": "Tema",
+        "color_theme_label": "Tema de Color",
+        "language_label": "Idioma",
+        "coding_lang_label": "Lenguaje de Programación",
+        "api_key_label": "Clave API",
+        "ai_model_label": "Modelo de IA",
+        "submit_button": "Guardar Ajustes",
+        "open_console_switch": "Abrir Consola",
+        "placeholder_api": "Ingrese la clave API.",
+        "placeholder_aimodel": "Ingrese el modelo de IA.",
+        "GetApiKey": "Obtener clave API."
+    },
+    "CreateAppPage": {
+        "window_title": "Crear Aplicación",
+        "title": "Crear Nueva Aplicación",
+        "app_type_label": "Tipo de Aplicación",
+        "app_title_label": "Nombre de la Aplicación",
+        "platform_label": "Plataforma",
+        "ui_library_label": "Bib. de UI",
+        "language_label": "Idioma",
+        "gui_switch": "GUI",
+        "user_input_label": "Entrada de Usuario",
+        "create_app_button": "Crear Aplicación",
+        "information_text": "* Cada aplicación utiliza su dirección API. \n\n* Usted es responsable de la aplicación con IA que cree. \n\n* Su aplicación puede contener errores. \n\n[!] Si la aplicación no responde, no la cierre. Este error ocurre porque el proceso continúa en segundo plano."
+    },
+    "AboutPage": {
+        "window_title": "Acerca de",
+        "title": "Acerca de",
+        "about_text": "¿Qué es YourApp?\n\nYourApp le permite crear sus propias aplicaciones utilizando herramientas de IA. Puede elegir cualquier modelo de Google Gemini AI y crear aplicaciones sencillas con él. Debe ingresar su propia clave API.\n\n+ ¿Es segura la clave API?\nLa clave API que ingresa se cifra dentro de la aplicación y se guarda en los archivos.\n\n+ ¿Cómo se usa?\nAl crear su aplicación, puede seleccionar las opciones y ejecutarla escribiendo unas pocas palabras. ¿Cómo funciona? La aplicación genera un prompt en segundo plano basado en sus opciones y envía esta información a la IA a través de su clave API. Luego, la IA escribe el software, la aplicación recibe el código, lo convierte en un archivo .exe y se lo entrega.\n\n[!] ADVERTENCIA:\nEsta aplicación solo es compatible con claves API como Gemini. Puede no ser compatible con claves API de otros sistemas de IA y producir resultados incorrectos.\n\n+ Código Abierto:\nA Keops Studios le encanta el software de código abierto. Esta aplicación es totalmente de código abierto; puede revisar el código fuente en cualquier momento. Sin embargo, la calidad del código puede ser baja, pedimos disculpas por ello :)\n\n+ Contáctenos:\n¡Puede contactarnos a través de estos enlaces!\n"
+    },
+    "ErrMessages": {
+        "RepoNotFound": "[!] ¡Repositorio no encontrado!",
+        "ExitMessage": "¿Está seguro de que desea salir?",
+        "NotInternet": "No hay conexión a internet.",
+        "ChooseApp": "¡Por favor, elija una aplicación!",
+        "CreationFailed": "Error al crear la aplicación."
+    },
+    "InfoMessages": {
+        "RestartApp": "Por favor, reinicie la aplicación.",
+        "SettingsSaved": "Sus ajustes han sido guardados."
+    },
+    "WarningMessages": {
+        "ApiNotFound": "Primero debe ingresar una clave API y un modelo de IA en los ajustes.",
+        "RepoNotFoundMSG": "¡Advertencia! ¡No se encontró el repositorio fuente de la aplicación! Podría enfrentar varios problemas."
+    },
+    "AskMessages": {
+        "ExitMessage": "¿Está seguro de que desea salir?",
+        "DeleteMessage": "¿Está seguro de que desea eliminar la aplicación? Se eliminarán el código fuente y el archivo .exe."
+    },
+    "GlobalText": {
+        "loading": "CARGANDO",
+        "loading_screen": "POR FAVOR ESPERE",
+        "loading_screen_subtitle": "Por favor espere, su aplicación se está creando..."
+    }
+}
