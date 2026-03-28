@@ -5,6 +5,7 @@ import json
 from colorama import Fore, init
 from tkinter import messagebox
 import random
+import pip
 
 import modules.file_manager as manager
 import modules.launcher as launcher
@@ -57,6 +58,7 @@ CONSTRAINTS & STYLE:
 - SECURITY: For simple tasks, please don't use cryptography. Use cryptography only if you're developing applications that need to remain confidential, such as APIs.
 - ERROR HANDLING: Use try-except, but don't use try-except inside the `if __name__ == "__main__"` code. Allow an error to be thrown when called with the `exec` function within a module.
 - READABILITY: Follow PEP 8. Add concise comments for complex logic.
+- LIBRARYS : Add the libraries you need to download to the very bottom of your code using the format <LIB> LIBRARY_NAME. We will retrieve these libraries using helper code and remove them from the main code. Please don't make any mistakes. List the libraries that come pre-installed in Python.
 
 INPUT TASK:
 {task_prompt}
@@ -92,8 +94,23 @@ def create_app():
             contents=f"{prompt}"
         )
 
-        with open(f"YourApp/source/{app_title}.py", "w", encoding="utf-8") as f:
-            f.write(str(response.text).replace("```", ""))
+        with open(f"YourApp/source/{app_title}.py", "r", encoding="utf-8") as f:
+            libraries = []
+
+            for k in f.readlines():
+                str(k)
+                lib_text = k.startswith("<LIB>")
+
+                if lib_text:
+                    libraries.append(lib_text[1])
+
+                    with open(f"YourApp/source/{app_title}.py", "w", encoding="utf-8") as f:
+                        code_text = str(response.text).replace("```", "").replace()
+                        f.write(code_text)
+
+            install_args = ['install'] + libraries
+
+            pip.main(install_args)
 
         print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Generate content sucsessful.")
         print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Code writed.")
