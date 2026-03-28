@@ -1,10 +1,11 @@
 import os
 import subprocess
-import modules.file_manager as manager
 import shutil
-import pip
 from colorama import Fore, init
 import sys
+from pathlib import Path
+
+import modules.file_manager as manager
 
 init(autoreset=True)
 
@@ -15,46 +16,53 @@ def get_module_name():
 
 def build_exe(main_file, app_name, gui: bool):
     try:
-        pip.main(["install", "pyinstaller"])
-        ana_dosya = main_file
-        uygulama_adi = app_name
-        hedef_klasor = os.path.abspath("YourApp/products")
-        kaynak_klasoru = os.path.abspath("YourApp/source")
+        base_path = Path.cwd()
+        source_folder = (base_path / "YourApp" / "source").absolute()
+        product_folder = (base_path / "YourApp" / "products").absolute()
+        
+        product_folder.mkdir(parents=True, exist_ok=True)
+        source_folder.mkdir(parents=True, exist_ok=True)
 
-        print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Packaging begins: {ana_dosya}")
+        pure_file_name = os.path.basename(main_file)
+        main_py_path = source_folder / pure_file_name
+        
+        if not main_py_path.exists():
+            print(f"{Fore.RED}[ERROR] Script bulunamadı: {main_py_path}")
+            return
 
-        if gui == True:
-            command_gui = [sys.executable,
-                "-m",
-                "PyInstaller",
-                "--onefile",
-                "--clean",
-                "--distpath", hedef_klasor,
-                f"{app_name}.py"
-            ]
-            os.chdir(kaynak_klasoru)
-            subprocess.run(command_gui, check=True, shell=True)
+        print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Packaging is starting: {product_folder / app_name}.exe")
 
+        console_param = "--noconsole" if gui else "--console"
+        
+        command = [
+            sys.executable, "-m", "PyInstaller",
+            str(main_py_path),
+            "--onefile",
+            "--clean",
+            console_param,
+            "--name", str(app_name),
+            "--distpath", str(product_folder),
+            "--workpath", str(source_folder / "build"),
+            "--specpath", str(source_folder)
+        ]
+        result = subprocess.run(command, capture_output=True, text=True)
+
+        if result.returncode == 0:
+            print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] EXE converted: {product_folder / app_name}.exe")
         else:
-            command_console = [sys.executable,
-                "-m",
-                "PyInstaller",
-                "--onefile",
-                "--clean",
-                "--noconsole",
-                "--distpath", hedef_klasor,
-                f"{app_name}.py"
-            ]
-            os.chdir(kaynak_klasoru)
-            exe = subprocess.run(command_console, check=True, shell=True)
+            print(f"{Fore.RED}[ERROR - {get_module_name()}] PyInstaller error: {result.stderr}")
+            return
 
-        if os.path.exists("build"):
-            shutil.rmtree("build")
+        build_dir = source_folder / "build"
+        spec_file = source_folder / f"{app_name}.spec"
+
+        if build_dir.exists():
+            shutil.rmtree(build_dir, ignore_errors=True)
             print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] 'build' removed.")
 
-        spec_path = os.path.join(kaynak_klasoru, f"{uygulama_adi}.spec")
-        if os.path.exists(spec_path):
-            os.remove(spec_path)
-            print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] '{uygulama_adi}.spec' removed.")
+        if spec_file.exists():
+            os.remove(spec_file)
+            print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] 'spec' removed.")
+
     except Exception as e:
         print(f"{Fore.RED}[ERROR - {get_module_name()}] {e}")
