@@ -570,7 +570,7 @@ def main():
         else:
             print(f"{Fore.YELLOW}[WARNING - {get_module_name()}] The version is out of date!")
             messagebox.showwarning("YourApp", f"YourApp version {version_control.check_version().strip().lower()} has been released! Updating is recommended.")
-
+            temp_message = "[!] Update Available"
         upload_screen()
 
         x = root.winfo_screenwidth() // 2 - 500
