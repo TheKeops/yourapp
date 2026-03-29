@@ -153,7 +153,7 @@ def main():
                 settings["ai-model"] = ai_model.get().lower().strip()
 
                 if str(settings["ai-model"]).strip() == "":
-                    settings["ai-model"] == None
+                    settings["ai-model"] = None
                 
                 if api_key.get().strip() == "":
                     settings["api-key-insert"] = False
@@ -315,6 +315,18 @@ def main():
             version.place(x=390, y=660)
 
         def main_page():
+            def reload_list():
+                loading_text.configure(text="Loading Products...")
+                root.update()
+                products_list.delete(0, tk.END)
+                root.update()
+                for i in os.listdir("YourApp/products"):
+                    products_list.insert(tk.END, i)
+                    root.update()
+                    time.sleep(0.1)
+                loading_text.configure(text="")
+                root.update()
+
             def delete_app():
                 ask = messagebox.askyesno("YourApp", f"{lang_text['AskMessages']['DeleteMessage']}")
                 
@@ -384,7 +396,7 @@ def main():
             root.update()
             root.title(f"YourApp | {lang_text['MainPage']['window_title']}")
 
-            sidemenu_canvas = ctk.CTkFrame(root, width=int(260), height=int(750), fg_color="#333333", corner_radius=0)
+            sidemenu_canvas = ctk.CTkFrame(root, width=int(round(260)), height=int(round(750)), fg_color="#333333", corner_radius=0)
             sidemenu_canvas.pack(side="left", fill="y")
             sidemenu_canvas.pack_propagate(False)
 
@@ -411,13 +423,14 @@ def main():
             delete_app_button.place(x=25, y=400)
             delete_app_button.configure(state="disabled")
 
-            products_list = tk.Listbox(root, width=40, height=19, font=("century gothic", 20, "bold"), activestyle="none", justify="center", foreground="white", background="#212121", borderwidth=0, border=0)
+            products_list = tk.Listbox(root, width=40, height=19, font=("century gothic", 20, "bold"), activestyle="none", justify="center", foreground="white", background="#212121", borderwidth=0, border=0, selectbackground="orange")
             products_list.place(x=330, y=40)
             products_list.bind("<<ListboxSelect>>", selected_products)
 
-            products_list.delete(0, tk.END)
-            for i in os.listdir("YourApp/products"):
-                products_list.insert(tk.END, i)
+            loading_text = ctk.CTkLabel(root, text="Loading Products...", font=ctk.CTkFont(size=15))
+            loading_text.place(relx=0.65, rely=0.03, anchor="center")
+
+            root.after(2000, reload_list)
 
             message = ctk.CTkLabel(root, text=f"{temp_message}", font=("consolas", 15), bg_color="#333333", text_color="#FFCA29")
             message.place(x=10, y=640)
@@ -468,13 +481,14 @@ def main():
                             root.update()
                             ai.create_app()
                             root.update()
-                            main_page()
-                            root.update()
+                            messagebox.showinfo("YourApp",f"{lang_text['InfoMessages']['RestartApp']}")
+                            root.destroy()
+
                         except Exception as inner_e:
-                            print(f"{Fore.RED}[ERROR - AI_PROCESS] {inner_e}")
+                            print(f"{Fore.RED}[ERROR - {get_module_name()}] {inner_e}")
                             root.update()
-                            main_page()
-                            root.update()
+                            messagebox.showinfo(f"YourApp", f"{lang_text['InfoMessages']['RestartApp']}")
+                            root.destroy()
 
                     except Exception as e:
                         print(f"{Fore.RED}[ERROR - {get_module_name()}] {e}")
@@ -567,10 +581,12 @@ def main():
 
         if str(settings["version"]).strip().lower() == version_control.check_version().strip().lower():
             print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Version up to date.")
+            temp_message = ""
         else:
             print(f"{Fore.YELLOW}[WARNING - {get_module_name()}] The version is out of date!")
             messagebox.showwarning("YourApp", f"YourApp version {version_control.check_version().strip().lower()} has been released! Updating is recommended.")
             temp_message = "[!] Update Available"
+            
         upload_screen()
 
         x = root.winfo_screenwidth() // 2 - 500
