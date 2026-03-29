@@ -58,7 +58,8 @@ CONSTRAINTS & STYLE:
 - SECURITY: For simple tasks, please don't use cryptography. Use cryptography only if you're developing applications that need to remain confidential, such as APIs.
 - ERROR HANDLING: Use try-except, but don't use try-except inside the `if __name__ == "__main__"` code. Allow an error to be thrown when called with the `exec` function within a module.
 - READABILITY: Follow PEP 8. Add concise comments for complex logic.
-- LIBRARYS : Add the libraries you need to download to the very bottom of your code using the format <LIB> LIBRARY_NAME. We will retrieve these libraries using helper code and remove them from the main code. Please don't make any mistakes. List the libraries that come pre-installed in Python.
+- LIBRARYS : Write all the libraries used in the code at the very bottom of the code in the format '<LIB> LIBRARY_NAME' without single quotes. The purpose of this is to be able to download the libraries in the application.
+- FOOTNOTE : The application will run as an executable file (.exe), so there shouldn't be any problems or errors when running as an executable.
 
 INPUT TASK:
 {task_prompt}
@@ -70,6 +71,7 @@ INPUT TASK:
         print(f"{Fore.RED}[ERROR - {get_module_name()}] {e}")
 
 def create_app():
+    lang_text = None
     try:
         with open("YourApp/data/api/api.json", "r") as f:
             encrypting_api = json.load(f)
@@ -94,23 +96,30 @@ def create_app():
             contents=f"{prompt}"
         )
 
+        libraries = []
+
+        if response.text is None:
+            raise ValueError("AI model returned an empty response. Check your API key and model name.")
+
+        with open(f"YourApp/source/{app_title}.py", "w", encoding="utf-8") as f:
+            code_text = str(response.text).replace("```", "")
+            f.write(code_text)
+
         with open(f"YourApp/source/{app_title}.py", "r", encoding="utf-8") as f:
-            libraries = []
+            code_lines = f.readlines()
 
-            for k in f.readlines():
-                str(k)
-                lib_text = k.startswith("<LIB>")
+        with open(f"YourApp/source/{app_title}.py", "w", encoding="utf-8") as f:
+            for line in code_lines:
+                cutted = line.split(" ")
 
-                if lib_text:
-                    libraries.append(lib_text[1])
+                if cutted[0] != "<LIB>":
+                    f.write(line)
+                else:
+                    libraries.append(cutted[1].replace("\n", ""))
 
-                    with open(f"YourApp/source/{app_title}.py", "w", encoding="utf-8") as f:
-                        code_text = str(response.text).replace("```", "").replace()
-                        f.write(code_text)
+        install_args = ['install'] + libraries
 
-            install_args = ['install'] + libraries
-
-            pip.main(install_args)
+        pip.main(install_args)
 
         print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Generate content sucsessful.")
         print(f"{Fore.GREEN}[DEBUG - {get_module_name()}] Code writed.")
@@ -121,4 +130,7 @@ def create_app():
 
     except Exception as e:
         print(f"{Fore.RED}[ERROR - {get_module_name()}] {e}")
-        messagebox.showerror("YourApp", f"{lang_text['ErrMessages']['CreationFailed']}", detail=f"{e}")
+        if lang_text:
+            messagebox.showerror("YourApp", f"{lang_text['ErrMessages']['CreationFailed']}", detail=f"{e}")
+        else:
+            messagebox.showerror("YourApp", "Application creation failed.", detail=f"{e}")
